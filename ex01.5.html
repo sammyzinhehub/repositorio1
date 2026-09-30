@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos do DOM</title>
+    <style>
+        body{
+            background-color: rgb(240, 125, 230);
+            font: normal 19px;
+            color: rgb(27, 73, 1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <h2>Selecionando elementos DOM</h2>
+    <p>Posso selecionar elementos <strong>DOM</strong>: por marca (tagname); por ID; po classe; por seletor (por CSS)</p>
+    <p id="kill">Existem alguns comandos que nós vamos utilizar</p>
+    <h3>Por marca (tagname)</h3>
+    <p>O comando é: getElementsByTagName</p>
+    <p>Como está no plural: getElements... eu preciso dizer o número do elemento que eu quero utilizar, lembrando que no JS  a contagem dos elementos começa do Zero.</p>
+    <h3>Por ID</h3>
+    <p>O comando é: getElementById</p>
+    <p>Preciso atribuir um ID na tag que eu quero manipular</p>
+    <h3>Por class</h3>
+    <p class="killua">O comando é: getElementsByClassname</p>
+    <h3>Por seletor de CSS</h3>
+    <p>O comando é: querySelector</p>
+    <script>
+       var p1 = window.document.getElementsByTagName('p')[0]
+      /* window.document.write('Está escrito assim:'+p1.innerHTML)
+      Esse método é a interpolação*/
+      window.document.write(`Está escrito assim: ${p1.innerHTML}`)
+      /*Esse método se chama template string*/
+      /*var p2 = window.document.getElementById('kill')
+      p2.style.background = 'orange'*/
+      var p2 = document.getElementsByClassName('killua')[0]
+      p2.style.background = 'orange'
+      /*var p4 = Document.querySelector('p#plural')
+      p4. innerHTML = 'um xero pra tu!'*/
+      document.querySelector('p#lural').
+      innerHTML = 'um xero pra tu!'
+    </script>
+    
+</body>
+</html>
